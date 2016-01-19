@@ -10,7 +10,7 @@ public class JustSelect {
 		int[] numb = new int[n];
 		
 		for (int i = 0; i < n; i++) {
-			numb[i] = rand.nextInt(40);
+			numb[i] = rand.nextInt(100);
 		}
 		
 		
