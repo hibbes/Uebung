@@ -11,7 +11,7 @@ public class JustQuick {
 		numb = new int[n];
 		
 		for (int i = 0; i < n; i++) {
-			numb[i] = rand.nextInt(40);
+			numb[i] = rand.nextInt(100);
 		}
 		
 		final long timeStart = System.nanoTime(); 
