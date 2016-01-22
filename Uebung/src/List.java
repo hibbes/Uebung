@@ -6,6 +6,7 @@ public class List {
 			
 	public static void main(String[] args) {
 		ArrayList<String> liste = new ArrayList<String>();
+				
 		liste.add("Deutsch");
 		liste.add("Englisch");
 		liste.add("Geographie");
