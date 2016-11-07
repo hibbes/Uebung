@@ -14,7 +14,7 @@ public class Potenz {
 			x++;
 		} 
 		}
-		
+
 	
 	
 	for(int i=0; i<matrix.length; i++){	// Zeilen
