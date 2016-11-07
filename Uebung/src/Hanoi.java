@@ -1,4 +1,5 @@
 public class Hanoi {
+	public static long count = 0;
 
     /**
      * Bewegt n Scheiben von Turm a nach Turm c und benutzt als
@@ -6,9 +7,11 @@ public class Hanoi {
      */
     private static void bewege (char a, char b, char c, int n)
     {
-	if (n == 1)
-	    System.out.println("Lege die oberste Scheibe von " + 
+	if (n == 1){
+	    System.out.println("Zug: "+count+" - Lege die oberste Scheibe von " + 
 		   "Turm " + a + " auf Turm " + c + ".");
+		   count++;}
+		   
 	else {
             bewege(a, c, b, n-1);
             bewege(a, b, c, 1);
@@ -18,7 +21,7 @@ public class Hanoi {
 
     public static void main (String[] args)
     {
-	bewege('a', 'b', 'c', 3);
+	bewege('a', 'b', 'c', 100);
     }
 
 }
