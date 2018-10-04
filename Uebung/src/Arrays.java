@@ -1,57 +1,23 @@
-
 public class Arrays {
 
-	static char [] array1 = new char[50];
-	static int i = 0;
-	static int j = 0;
+public static void main (String[] args){
+	int [] teilnehmer;
+	teilnehmer = new int[120];
 	
-	public static void main(String[] args) {
-
-		
-		
-		push('!');
-		push('d');
-		push('l');
-		push('r');
-		push('o');
-		push('W');
-		push(' ');
-		push('o');
-		push('l');
-		push('l');
-		push('e');
-		push('H');
-		
-		
-				
-		
-		while(!empty()){
-			System.out.print(pop());
-		}
-		
-		}
+	int[] dozenten = new int[10];
 	
+	teilnehmer[119] = 1233456;
 	
-		public static void push(char element){
-			array1[i]=element;
-			i++;
-			j++;
-		}
-		
-		public static char pop(){
-			
-			 
-			char element =	array1[j-i];
-			i--;
-		
-		return element;
-		  }
-		 
-	    public static boolean empty(){
-	    	if(i>0){return false;}
-	    		else{  	
-	    			return true;}
-	    	
+	int[] primzahlen = {2,3,5,7,11,13};
+	
+/*	for(int schnurz: primzahlen){
+		System.out.print(schnurz+", ");
+	} */
+	
+	for(int i=0; i<primzahlen.length; i++){
+		System.out.println(primzahlen[i]);
+	}
+	
 	    }
 	
 }	
