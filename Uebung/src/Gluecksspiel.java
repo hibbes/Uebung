@@ -70,7 +70,8 @@ public class Gluecksspiel {
       double wert = Math.random();
       
       wert = wert*100;
-    
+   
+      
       return (int)wert ;}
 	
      
