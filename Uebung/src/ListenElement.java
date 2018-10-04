@@ -1,8 +1,11 @@
 
 public class ListenElement {
 	
+	
 	private int inhalt;
 	private ListenElement next;
+	
+	
 	
 	public ListenElement (int inhalt){
 		this.inhalt = inhalt;
