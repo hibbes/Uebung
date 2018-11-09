@@ -9,15 +9,22 @@ public class Rucksackproblem {
 		if(i<gVol.length){
 			// nicht einpacken
 			int nicht = packen(restVol, i+1);
+			System.out.println();
+			System.out.println("Restvolumen ist "+restVol);
+			System.out.println("Nicht-Wert ist: "+ nicht +" und Arrayposition ist: "+i);
 			
 			// einpacken
 			int drin = 0;
 			if(restVol - gVol[i] >=0){
 					 drin = gWert[i] + packen(restVol-gVol[i], i+1);
+					 System.out.println("Drin-Wert ist: "+ drin +" und Arrayposition ist: "+i);
 			}
 			if(nicht>drin){
+				System.out.println("Kein Neupacken");
 				return nicht;
-			}else{return drin;}
+			}else{
+				System.out.println("Neupacken");
+				return drin;}
 		}
 		return 0;
 	}
