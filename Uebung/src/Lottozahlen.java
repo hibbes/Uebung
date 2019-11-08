@@ -2,29 +2,57 @@
 public class Lottozahlen {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		int[] ziehung = new int[7];
-		boolean treffer;
+		boolean[] lottozahlen = new boolean[49];
+		int ziehung;
+		int superzahl = (int) (Math.random() * 8) + 1;
 
-		System.out.println("Die Lottozahlen 1:");
-		for (int i = 0; i < ziehung.length; i++) {
-			ziehung[i] = (int) (Math.random() * 48) + 1;
-			System.out.println(ziehung[i]);
+		for (int i = 0; i < 6; i++) {
+			do {
+				ziehung = (int) (Math.random() * 48) + 1;
+				
+			} while (lottozahlen[ziehung]);
+
+			lottozahlen[ziehung] = true;
 		}
 
-	/*	boolean[] ziehungnew = new boolean[48];
-
-		for (int i = 0; i < 7; i++) {
-			treffer = false;
-
-			int zahl = (int) (Math.random() * 48) + 1;
-
-			for (int j = 0; treffer && j < ziehungnew.length; j++) {
-				if (j == zahl) {
-					ziehungnew[j] = true;
-				}
+		for (int i = 0; i < lottozahlen.length; i++) {
+			if (lottozahlen[i]) {
+				System.out.print(i + " ");
 			}
-		} */
+		}
+		System.out.println("\nSuperzahl "+ superzahl);
+
+		/*
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * int j = 2; while(true) { boolean isPrime = true;
+		 * 
+		 * for (int i = 2; i <= Math.sqrt(j) && isPrime; i++) { if (j % i == 0)
+		 * { isPrime = false; } } if (isPrime) { System.out.println(j);
+		 * 
+		 * } j++; }
+		 */
 	}
+
 }
