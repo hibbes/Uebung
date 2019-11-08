@@ -6,6 +6,7 @@ public static void main (String[] args){
 	
 	int[] dozenten = new int[10];
 	
+	
 	teilnehmer[119] = 1233456;
 	
 	int[] primzahlen = {2,3,5,7,11,13};
