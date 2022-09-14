@@ -28,8 +28,15 @@ public class ListenElement {
 		 }
 	}
 	
-	
-	
+	public void remove() {
+		if(next==null) {
+			System.out.println(inhalt);
+		
+	}else {
+		next.remove();
+	}
+		return;
+}
 	
 	 public int getGroesse(int anzahl){
 		 int zahl = anzahl+1;
