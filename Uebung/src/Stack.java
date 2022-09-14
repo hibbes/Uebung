@@ -1,37 +1,36 @@
 public class Stack {
 
-	static int number=117;
-
+	private ListenElement kopf;
+	private ListenElement tmp;
 	
-	public static void main(String[] args) {
-		for(int i =0; i<=1000;i++){
-			number=i;
-			System.out.println("");
-			System.out.print("n ="+number+": ");
-		while(number>1){
-		
-			if(number%2==0){
-			number=number/2;}
-		else{number=(number*3)+1;}
-		System.out.print(number +", ");	
-		}
+	public Stack(int wert) {
+		kopf=new ListenElement(wert);
 	}
-
-	}
-	
-	
-	public static boolean isPrime(int number){
-		if(number<2){return false;}
-		
-		for(int i=2; i<number/2;i++){
-		 			 
-		 if(number%i==0){
-			 System.out.println("Teiler:" +i);
-			return false;
-		 }
+		public void push(int wert) {
+			tmp=kopf;
+			kopf=new ListenElement(wert);
+			kopf.add(tmp);
 		}
 		
-		return true;
-	}
+		public void pop() throws Exception {
+			
+			System.out.println(kopf.getInhalt());
+			kopf=kopf.next;} 
+			
+		
+		
+		public void top() throws Exception {
+			System.out.println(kopf.getInhalt());
+		}
+				
+		public int getGroesse(){
+			return kopf.getGroesse(0);
+		}
+		
+		
+		
+		
+		
+	
 	
 }

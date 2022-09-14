@@ -3,13 +3,22 @@ public class ListenElement {
 	
 	
 	private int inhalt;
-	private ListenElement next;
+	public ListenElement next;
 	
 	
 	
 	public ListenElement (int inhalt){
 		this.inhalt = inhalt;
 	}
+
+	
+	
+	
+	
+	
+	public boolean isEmpty() {return true;}
+	
+	public void top() {}
 	
 	public void add(ListenElement neu){
 		 if(next==null){
@@ -19,6 +28,9 @@ public class ListenElement {
 		 }
 	}
 	
+	
+	
+	
 	 public int getGroesse(int anzahl){
 		 int zahl = anzahl+1;
 		 if(next!=null){
@@ -27,6 +39,10 @@ public class ListenElement {
 		 return zahl;
 			 
 		 }
+	 
+	 public String getInhalt() {
+		 return ""+inhalt;
+	 }
 	 
 	 public String toString(){
 			if(next== null){
