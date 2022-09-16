@@ -11,11 +11,7 @@ public class ListenElement {
 		this.inhalt = inhalt;
 	}
 
-	
-	
-	
-	
-	
+		
 	public boolean isEmpty() {return true;}
 	
 	public void top() {}
@@ -35,10 +31,12 @@ public class ListenElement {
 	}else {
 		next.remove();
 	}
+		next=null;
 		return;
+		
 }
 	
-	 public int getGroesse(int anzahl){
+	 public int getGroesse(int anzahl) {
 		 int zahl = anzahl+1;
 		 if(next!=null){
 			return next.getGroesse(zahl);}
