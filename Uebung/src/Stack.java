@@ -18,6 +18,8 @@ public class Stack {
 		System.out.println(kopf.getInhalt());
 		kopf = kopf.next;
 	}
+	
+	public void isEmpty() throws Exception {};
 
 	public void top() throws Exception {
 		System.out.println(kopf.getInhalt());

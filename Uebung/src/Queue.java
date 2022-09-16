@@ -7,13 +7,13 @@ public class Queue {
 		kopf = new ListenElement(wert);
 	}
 
-	public void enqeue(int wert) {
+	public void enqueue(int wert) {
 		tmp = kopf;
 		kopf = new ListenElement(wert);
 		kopf.add(tmp);
 	}
 
-	public void deqeue() throws Exception {
+	public void dequeue() throws Exception {
 		kopf.remove();
 
 	}
