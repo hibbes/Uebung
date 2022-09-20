@@ -37,6 +37,20 @@ public class ArrayStack {
 
 	}
 
+	
+	public void connect() {
+		
+		int tmptos = 0;
+		int[] tmp = new int[100];
+		while (tos >= 0) {
+			tmp[tmptos] = top();
+			pop();
+			tmptos++;
+		}
+		tos = 0;
+		tmptos--;
+	}
+	
 	public int[] copy() {
 		int[] tmp = new int[100];
 		int[] copy = new int[100];
@@ -51,6 +65,9 @@ public class ArrayStack {
 		tmptos--;
 		
 		do {
+		
+			
+			
 			stack[tos] = tmp[tmptos];
 			copy[tos] = tmp[tmptos];
 			tmptos--;

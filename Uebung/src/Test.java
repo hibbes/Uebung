@@ -3,16 +3,18 @@ public class Test {
 
 	public static void main(String[] args) {
 
+		
+		
+		
 		ArrayStack meinStack = new ArrayStack();
 		meinStack.push(42);
 		meinStack.push(39);
 		meinStack.push(7);
 		meinStack.push(9);
 		
-	//	System.out.println(meinStack.stack[1]);
 		
-	
-
+		
+	//	System.out.println(meinStack.stack[1]);
 		int[] myCopy = meinStack.copy();
 		
 		for (int i = 0; i<4; i++) {
