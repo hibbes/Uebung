@@ -2,25 +2,40 @@
 public class Test {
 
 	public static void main(String[] args) {
-		ListenElement element1 = new ListenElement(4);
-		ListenElement element2 = new ListenElement(42);
-		Queue myQueue = new Queue(3);
-		myQueue.enqueue(6);
-		System.out.println("Größe: " + myQueue.getGroesse());
 
-		try {
-			myQueue.dequeue();
-		} catch (Exception e) {
+		ArrayStack meinStack = new ArrayStack();
+		meinStack.push(42);
+		meinStack.push(39);
+		meinStack.push(7);
+		meinStack.push(9);
+		
+	//	System.out.println(meinStack.stack[1]);
+		
+	
 
-			System.out.println("Die ist leer!");
+		int[] myCopy = meinStack.copy();
+		
+		for (int i = 0; i<4; i++) {
+			System.out.println(myCopy[i]);
 		}
-
-		System.out.println("Größe: " + myQueue.getGroesse());
-
+		
+		
 	}
+
 }
 /*
- * try { stack.top(); } catch (Exception e) {
+ * ListenElement element1 = new ListenElement(4);
+ * 
+ * ListenElement element2 = new ListenElement(42); Queue myQueue = new Queue(3);
+ * myQueue.enqueue(6); System.out.println("Größe: " + myQueue.getGroesse());
+ * 
+ * try { myQueue.dequeue(); } catch (Exception e) {
+ * 
+ * System.out.println("Die ist leer!"); }
+ * 
+ * System.out.println("Größe: " + myQueue.getGroesse());
+ * 
+ * } } /* try { stack.top(); } catch (Exception e) {
  * 
  * System.out.println("Der Stapel ist leer!"); }
  * 

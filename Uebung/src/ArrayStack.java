@@ -1,7 +1,7 @@
 
 public class ArrayStack {
 
-	private int[] stack;
+	public int[] stack;
 	private int tos;
 
 	public ArrayStack() {
@@ -17,27 +17,47 @@ public class ArrayStack {
 	}
 
 	public void pop() {
-		if (!empty())
+
+		if (!empty()) {
+
 			tos--;
+		}
+
 	}
 
-	
-	
-	
 	public boolean empty() {
 
-		{
-			return (tos == -1);
-		}
+		return (tos == -1);
 	}
 
-	
-	public Object top()
-	   {
-	      if (!empty())
-	         return stack[tos];
-	      else
-	         return null;
-	   }
-	
+	public int top() {
+		if (!empty())
+			return stack[tos];
+		return 0;
+
+	}
+
+	public int[] copy() {
+		int[] tmp = new int[100];
+		int[] copy = new int[100];
+		int tmptos = 0;
+
+		while (tos >= 0) {
+			tmp[tmptos] = top();
+			pop();
+			tmptos++;
+		}
+		tos = 0;
+		tmptos--;
+		
+		do {
+			stack[tos] = tmp[tmptos];
+			copy[tos] = tmp[tmptos];
+			tmptos--;
+			tos++;
+		} while (tmptos >= 0);
+		return copy;
+
+	}
+
 }
