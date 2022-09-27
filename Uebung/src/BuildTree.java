@@ -4,15 +4,15 @@ public class BuildTree
 
    public BuildTree()
    {
-      root = new Element(100);
+      root = new Element(42);
       
-      root.insert(75);
-      root.insert(82);
-      root.insert(190);
+      root.insert(9);
+      root.insert(8);
+      root.insert(14);
+      root.insert(90);
       root.insert(222);
-      root.insert(223);
-      root.insert(224);
-      root.insert(225);
+      root.insert(569);
+      root.insert(98);
      
       
    }

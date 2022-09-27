@@ -6,7 +6,13 @@ public class Test {
 		BuildTree meinBaum = new BuildTree();
 	//	meinBaum.root.left.right.left.show();
 		 System.out.println(meinBaum.root.depth(1));
-		meinBaum.root.right.right.show();
+	     meinBaum.root.preOrder(); 
+	     System.out.println();
+	     meinBaum.root.inOrder();
+	     System.out.println();
+	     meinBaum.root.postOrder();
+
+
 		
 		
 	}
