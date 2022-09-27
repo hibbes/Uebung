@@ -5,11 +5,19 @@ public class BuildTree
    public BuildTree()
    {
       root = new Element(100);
-      root.left = new Element(50);
-      root.right = new Element(150);  
+      
       root.insert(75);
+      root.insert(82);
+      root.insert(190);
+      root.insert(222);
+      root.insert(223);
+      root.insert(224);
+      root.insert(225);
+     
       
    }
+   
+   
    
    
    
