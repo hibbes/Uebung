@@ -11,6 +11,8 @@ public class Test {
 	     meinBaum.root.inOrder();
 	     System.out.println();
 	     meinBaum.root.postOrder();
+	     System.out.println();
+	     System.out.println(meinBaum.root.counter());
 
 
 		

@@ -1,5 +1,6 @@
 public class Element {
 	static int maxdepth = 0;
+	static int counter = 0;
 	public int value;
 	public Element left, right;
 	public int depth;
@@ -92,4 +93,23 @@ public class Element {
 		System.out.print(value + " ");
 
 	}
+
+	public int counter() {
+		counter++;
+		if (left != null) {
+			left.counter();
+		}
+		// System.out.println("Lefttiefe: " + depth + " Maxtiefe: " + maxdepth);
+		
+
+		if (right != null)
+
+		{
+			right.counter();
+		}
+		// System.out.println("Righttiefe: " + depth + " Maxtiefe: " + maxdepth);
+
+		return counter;
+	}
+
 }
