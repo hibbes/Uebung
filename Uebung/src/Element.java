@@ -1,9 +1,9 @@
 public class Element {
-	static int maxdepth=0;
+	static int maxdepth = 0;
 	public int value;
 	public Element left, right;
 	public int depth;
-	
+
 	Element(int n) {
 		value = n;
 		left = null;
@@ -14,7 +14,7 @@ public class Element {
 
 		if (value >= this.value) {
 			if (right == null) {
-				
+
 				right = new Element(value);
 			} else {
 				right.insert(value);
@@ -22,7 +22,7 @@ public class Element {
 
 		} else {
 			if (left == null) {
-				left= new Element(value);
+				left = new Element(value);
 			} else {
 				left.insert(value);
 			}
@@ -31,27 +31,65 @@ public class Element {
 	}
 
 	public int depth(int depth) {
-	
-		if(left != null) {
+
+		if (left != null) {
 			depth++;
-			if(depth>maxdepth) {maxdepth++;}
-			System.out.println("Lefttiefe: "+ depth+" Maxtiefe: "+maxdepth);
+			if (depth > maxdepth) {
+				maxdepth++;
+			}
+			// System.out.println("Lefttiefe: " + depth + " Maxtiefe: " + maxdepth);
 			left.depth(depth);
 			depth--;
 		}
-		if(right != null) {
+		if (right != null) {
 			depth++;
-			if(depth>maxdepth) {maxdepth++;}
-			System.out.println("Righttiefe: "+ depth+" Maxtiefe: "+maxdepth);
+			if (depth > maxdepth) {
+				maxdepth++;
+			}
+			// System.out.println("Righttiefe: " + depth + " Maxtiefe: " + maxdepth);
 			right.depth(depth);
-			depth--;}
-			
-		return maxdepth;
+			depth--;
 		}
-		
-	
-	
+
+		return maxdepth;
+	}
+
 	public void show() {
 		System.out.println("" + value);
+	}
+
+	public void preOrder() {
+		System.out.print(value + " ");
+		if (left != null) {
+			left.preOrder();
+		}
+		if (right != null) {
+			right.preOrder();
+		}
+
+	}
+
+	public void inOrder() {
+
+		if (left != null) {
+			left.inOrder();
+		}
+		System.out.print(value + " ");
+		if (right != null) {
+			right.inOrder();
+		}
+	}
+
+	public void postOrder() {
+
+		if (left != null) {
+			left.postOrder();
+		}
+
+		if (right != null) {
+			right.postOrder();
+		}
+		System.out.print(value + " ");
+
 	}
 }
