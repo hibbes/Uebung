@@ -4,8 +4,9 @@ public class Test {
 	public static void main(String[] args) {
 
 		BuildTree meinBaum = new BuildTree();
-		meinBaum.root.left.right.show();
-	//	meinBaum.root.right.show();
+	//	meinBaum.root.left.right.left.show();
+		 System.out.println(meinBaum.root.depth(1));
+		meinBaum.root.right.right.show();
 		
 		
 	}
