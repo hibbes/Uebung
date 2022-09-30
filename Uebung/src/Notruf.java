@@ -14,5 +14,8 @@ public class Notruf {
 		this.prio=prio;
 		
 	}
+	public String toString() {
+		return "Nummer: "+nummer+" Beschreibung: "+beschreibung+" Priorität: "+prio;
+	}
 
 }
