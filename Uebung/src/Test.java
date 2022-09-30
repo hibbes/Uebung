@@ -3,7 +3,31 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		BuildTree meinBaum = new BuildTree();
+		BuildPQueue meinPQueue = new BuildPQueue();
+		
+		meinPQueue.insert(new Notruf(1,"Treppensturz",5,34,55,2));
+		
+		meinPQueue.insert(new Notruf(2,"Platzwunde",5,34,55,4));
+		
+		meinPQueue.insert(new Notruf(3,"Schenkelhals",5,34,55,3));
+		
+		meinPQueue.insert(new Notruf(4,"Schlaganfall",8,34,55,6));
+		
+		meinPQueue.insert(new Notruf(5,"Schnitt",8,34,55,0));
+		meinPQueue.showAll();
+		System.out.println("---");
+		System.out.println("Nächster Task"+meinPQueue.max());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+/*		BuildTree meinBaum = new BuildTree();
 	//	meinBaum.root.left.right.left.show();
 		 System.out.println(meinBaum.root.depth(1));
 	     meinBaum.root.preOrder(); 
@@ -14,7 +38,7 @@ public class Test {
 	     System.out.println();
 	     System.out.println(meinBaum.root.counter());
 
-
+*/
 		
 		
 	}
