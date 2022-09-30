@@ -1,18 +1,29 @@
 import java.util.ArrayList;
 
 public class BuildPQueue {
+	ArrayList<Notruf> pqueue;
 
-	public static void main(String[] args) {
-		ArrayList<Notruf> pqueue = new ArrayList<Notruf>();
-
+	public BuildPQueue() {
+		pqueue = new ArrayList<Notruf>();
 	}
 
-	public void insert(ArrayList pqueue, Notruf notruf) {
-		pqueue.add(6, notruf);
+	public void insert(ArrayList<Notruf> pqueue, Notruf notruf) {
+
+		for (int i = 0; i >= pqueue.size(); i++) {
+			if (pqueue.get(i).prio > notruf.prio) {
+				pqueue.add(i, notruf);
+				break;
+
+			}
+			
+
+		}
 
 	}
 
 	public void delete() {
+		pqueue.remove(pqueue.size()-1);
+		
 	}
 
 //	public Element max() {
