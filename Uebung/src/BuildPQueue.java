@@ -25,13 +25,18 @@ public class BuildPQueue {
 		pqueue.remove(pqueue.size()-1);
 		
 	}
-
+	
+	public void max() {
+		pqueue.get(pqueue.size()-1);
+	}
+	
+	public boolean empty() {
+		return pqueue.isEmpty();
+	}
 //	public Element max() {
 //		return 0;
 //	}
 
-	public boolean empty() {
-		return true;
-	}
+	
 
 }
