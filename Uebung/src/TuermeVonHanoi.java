@@ -45,3 +45,20 @@ public class TuermeVonHanoi {
 
     }
 }
+
+/*
+ * 1. bewegeScheiben(3,A,B,C)
+ * 2. bewegeScheiben(2,A,C,B)
+ * 3. bewegeScheiben(1,A,B,C)
+ * a) Verschiebe 1 von A nach C
+ * b) Verschiebe 2 von A nach B
+ * 4. bewegeScheiben(1,C,A,B)
+ * c) Verschiebe 1 von C zu B
+ * d) Verschiebe 3 von A zu C
+ * 5. bewegeScheiben(2,B,A,C)
+ * 6. bewegeScheiben(1,B,C,A)
+ * e) Verschiebe 1 von B zu A
+ * f) Verschiebe 2 von B zu C
+ * 7. bewegeScheiben(1,A,B,C)
+ * g) Verschiebe 1 von A zu C
+ */
