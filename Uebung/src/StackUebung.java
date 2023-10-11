@@ -1,9 +1,9 @@
-public class Stack {
+public class StackUebung {
 
 	private ListenElement kopf;
 	private ListenElement tmp;
 
-	public Stack(int wert) {
+	public StackUebung(int wert) {
 		kopf = new ListenElement(wert);
 	}
 
@@ -18,8 +18,9 @@ public class Stack {
 		System.out.println(kopf.getInhalt());
 		kopf = kopf.next;
 	}
-	
-	public void isEmpty() throws Exception {};
+
+	public void isEmpty() throws Exception {
+	};
 
 	public void top() throws Exception {
 		System.out.println(kopf.getInhalt());
