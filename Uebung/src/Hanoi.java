@@ -1,3 +1,29 @@
+/**
+ * Towers of Hanoi - Recursive Algorithm
+ * 
+ * Demonstrates the classic Towers of Hanoi puzzle solution using recursion.
+ * The puzzle involves moving a stack of disks from one peg to another,
+ * following these rules:
+ * - Only one disk can be moved at a time
+ * - A larger disk can never be placed on a smaller disk
+ * - All disks start on the source peg and must be moved to the destination peg
+ * 
+ * This class uses a recursive approach which elegantly solves the problem
+ * by breaking it down into smaller subproblems:
+ * To move n disks from source to destination using auxiliary:
+ * 1. Move n-1 disks from source to auxiliary (using destination as helper)
+ * 2. Move the largest disk from source to destination
+ * 3. Move n-1 disks from auxiliary to destination (using source as helper)
+ * 
+ * Time Complexity: O(2^n) - requires 2^n - 1 moves for n disks
+ * Space Complexity: O(n) - recursion depth
+ * 
+ * Educational Focus:
+ * - Understanding recursive algorithms
+ * - Breaking complex problems into simpler subproblems (divide and conquer)
+ * - Call stack visualization
+ * - Base cases in recursion
+ */
 public class Hanoi {
 	public static long count = 0;
 
