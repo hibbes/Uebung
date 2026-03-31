@@ -1,4 +1,60 @@
 
+/**
+ * Rucksackproblem (Knapsack Problem) - Recursive Dynamic Programming
+ * 
+ * The knapsack problem is a classic optimization problem in computer science.
+ * Given a set of items, each with a weight and value, determine which items
+ * to include to maximize value while staying within a weight limit.
+ * 
+ * Problem Definition (0/1 Knapsack):
+ * - n items, each with weight w[i] and value v[i]
+ * - Knapsack capacity W
+ * - Select items to maximize total value subject to weight constraint
+ * - Each item can be taken 0 or 1 times (not fractional)
+ * 
+ * Example:
+ * Items: [(weight=2, value=3), (weight=3, value=4), (weight=4, value=5)]
+ * Capacity: 6
+ * Best solution: Items 0 and 2, total weight=6, value=8
+ * 
+ * Recursive Approach:
+ * For each item, two choices:
+ * 1. Include item i: value[i] + knapsack(capacity - weight[i], i+1)
+ * 2. Exclude item i: knapsack(capacity, i+1)
+ * Take maximum of the two
+ * 
+ * Base Cases:
+ * - Item count = 0: return 0
+ * - Capacity <= 0: return 0
+ * 
+ * Time Complexity:
+ * - Without memoization: O(2^n) - exponential
+ * - With memoization (DP): O(n*W) - polynomial
+ * - DP Space: O(n*W) for memoization table
+ * 
+ * Recursion Tree Example (for 3 items):
+ *              knapsack(W, 3)
+ *            /              \
+ *      include[2]        exclude[2]
+ *         /    \            /    \
+ *    include  exclude   include  exclude
+ *    [1]       [1]        [1]      [1]
+ *    ...        ...        ...      ...
+ * 
+ * Educational Focus:
+ * - Recursive problem decomposition
+ * - Exponential vs polynomial complexity
+ * - Dynamic programming optimization
+ * - Memoization technique
+ * - Backtracking algorithms
+ * - NP-complete problems
+ * 
+ * Characteristics:
+ * - NP-complete problem: no known polynomial solution
+ * - Approximation algorithms exist for large instances
+ * - Used in real-world resource allocation
+ * - Basis for many optimization techniques
+ */
 public class Rucksackproblem {
 	
 	static int rVol =30;
