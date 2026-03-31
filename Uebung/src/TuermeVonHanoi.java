@@ -1,5 +1,23 @@
 import java.util.*;
 
+/**
+ * Towers of Hanoi - Main Class with Move Recording
+ * 
+ * Extension of the Towers of Hanoi algorithm that not only solves the puzzle
+ * but also records and displays each move made during the solution.
+ * 
+ * Each move is typically output in the format: "Move disk from peg X to peg Y"
+ * This allows visualization of the algorithm's execution step by step.
+ * 
+ * Time Complexity: O(2^n) - 2^n - 1 moves for n disks
+ * Space Complexity: O(n) - recursion depth
+ * 
+ * Educational Focus:
+ * - Recursive backtracking
+ * - Algorithm visualization and tracing
+ * - Understanding state changes during recursion
+ * - Pattern recognition in recursive solutions
+ */
 public class TuermeVonHanoi {
 
     public static void main(String args[]) {
