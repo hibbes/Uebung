@@ -1,5 +1,50 @@
 import java.util.Scanner;
 
+/**
+ * Gluecksspiel (Game of Chance) - Interactive Game with Scanner Input
+ * 
+ * Demonstrates user interaction via Scanner input, random number generation,
+ * and game loop logic. This is a gambling or chance-based game where users
+ * make decisions based on random outcomes.
+ * 
+ * Game Loop Structure:
+ * 1. Initialize game state (balance, rounds)
+ * 2. While game continues:
+ *    a. Display current state to user
+ *    b. Get user input via Scanner
+ *    c. Validate input
+ *    d. Process game logic
+ *    e. Generate random outcome
+ *    f. Update state based on outcome
+ *    g. Display result
+ * 3. End game and show final statistics
+ * 
+ * Scanner Input Handling:
+ * Scanner scanner = new Scanner(System.in);
+ * String input = scanner.nextLine();
+ * int number = scanner.nextInt();
+ * 
+ * Game Logic Elements:
+ * - Randomness: Random class or Math.random()
+ * - User choice: What to bet, what number to pick, etc.
+ * - Probability: Calculate odds of winning
+ * - Balance management: Track wins/losses
+ * - Exit conditions: When game ends
+ * 
+ * Educational Focus:
+ * - User I/O with Scanner class
+ * - Input validation and error handling
+ * - Game loop design
+ * - Random number generation
+ * - State management
+ * - Probability concepts
+ * 
+ * Common Game Types:
+ * - Dice rolling: Roll dice, guess outcome
+ * - Number guessing: Pick number 1-100
+ * - Coin flip: Heads/tails betting
+ * - Roulette simulation: Betting on numbers
+ */
 public class Gluecksspiel {
  
 	static int alter1 = 19;
@@ -75,7 +120,7 @@ public class Gluecksspiel {
 	
      public static void auswertung(){
     	 
-    	 System.out.println("Würfel: "+wuerfel );
+    	 System.out.println("WÃ¼rfel: "+wuerfel );
  		
  		abstand1=wuerfel-zahlPlayer1;
  		abstand2=wuerfel-zahlPlayer2;
