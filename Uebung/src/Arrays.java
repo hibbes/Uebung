@@ -1,3 +1,38 @@
+/**
+ * Arrays - Fundamental Array Operations and Algorithms
+ * 
+ * Demonstrates basic and intermediate array manipulation techniques,
+ * including searching, traversal, transformation, and analysis.
+ * 
+ * Common Array Operations:
+ * - Linear Search: Find element, O(n) time
+ * - Binary Search: Find element in sorted array, O(log n) time
+ * - Reversal: Flip array order, O(n) time
+ * - Filtering: Extract matching elements, O(n) time
+ * - Transformation: Apply function to each element, O(n) time
+ * - Aggregation: Sum, max, min, average, O(n) time
+ * - Sorting: Arrange in order, O(n log n) to O(n²)
+ * 
+ * Memory Layout (1D array of size n):
+ *    Index:   [0]  [1]  [2] ... [n-1]
+ *    Memory:  [X]--[X]--[X]--...--[X]
+ *    Access:  O(1) - direct indexing via formula: address = base + (index * element_size)
+ * 
+ * Time Complexity Overview:
+ * - Access by index: O(1)
+ * - Linear search: O(n)
+ * - Binary search: O(log n)
+ * - Reversal: O(n)
+ * - Copying: O(n)
+ * 
+ * Space Complexity: O(n) - linear with array size
+ * 
+ * Educational Focus:
+ * - Understanding memory layout and indexing
+ * - Array bounds and off-by-one errors
+ * - Algorithm selection based on array properties
+ * - Efficiency considerations in array operations
+ */
 public class Arrays {
 
 public static void main (String[] args){
