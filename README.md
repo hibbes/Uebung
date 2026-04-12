@@ -1,6 +1,8 @@
 # Uebung
 
-Sammelprojekt mit Informatik-Übungen aus dem Unterricht – **gewachsenes Sammelsurium** an kleinen Java-Klassen, die jeweils ein Konzept, einen Algorithmus oder eine Aufgabe isoliert behandeln. Gedacht als Steinbruch für Unterrichtsbeispiele, nicht als zusammenhängende Anwendung.
+Sammelprojekt mit Informatik-Übungen aus dem Unterricht – eine **kuratierte Sammlung** kleiner Java-Klassen, die jeweils ein Konzept, einen Algorithmus oder eine Aufgabe isoliert behandeln. Gedacht als Steinbruch für Unterrichtsbeispiele, nicht als zusammenhängende Anwendung.
+
+Alle Klassen sind didaktisch kommentiert und haben eine eigene `main`-Methode (sofern sinnvoll), sodass sie unabhängig voneinander lauffähig sind.
 
 ## Themenbereiche
 
@@ -8,61 +10,64 @@ Sammelprojekt mit Informatik-Übungen aus dem Unterricht – **gewachsenes Samme
 
 | Datei | Thema |
 |-------|-------|
-| `Liste.java`, `ListenElement.java` | Einfach verkettete Liste (rekursiv) |
-| `List.java`, `List2.java`, `List3.java` | Alternative Listenimplementierungen / Varianten |
-| `Element.java`, `Knoten.java` | Basisknoten für verkettete Strukturen |
-| `Baum.java`, `BuildTree.java` | Binärbaum: Aufbau und Traversierung |
-| `ArrayQueue.java`, `Queue.java` | Warteschlange (FIFO) – Array- und verkettete Variante |
-| `ArrayStack.java`, `StackUebung.java` | Stapel (LIFO) – Array-basiert |
-| `BuildPQueue.java` | Priority Queue |
+| `Liste.java`, `ListenElement.java` | Einfach verkettete Liste, rekursiv |
+| `Element.java` / `Knoten.java` | Knoten eines binären (Such-)Baums |
+| `Baum.java`, `BuildTree.java` | Binärbaum: Aufbau und Traversierungen (Pre/In/Post) |
+| `ArrayQueue.java`, `Queue.java` | Warteschlange (FIFO) – Array- und Listen-Variante |
+| `ArrayStack.java`, `StackUebung.java` | Stapel (LIFO) – Array- und Listen-Variante |
+| `BuildPQueue.java`, `Notruf.java` | Priority Queue am Beispiel Notrufzentrale |
 
 ### Sortieralgorithmen
 
-| Datei | Algorithmus |
-|-------|-------------|
-| `BubbleSort.java`, `JustBubble.java` | Bubble Sort – Nachbarn vertauschen |
-| `SelectionSort.java`, `JustSelect.java` | Selection Sort – kleinstes Element suchen |
-| `JustQuick.java` | Quicksort – Divide & Conquer |
-| `Arrays.java` | Array-Hilfsmethoden, Grundlage für die Sortierübungen |
+| Datei | Algorithmus | Laufzeit |
+|-------|-------------|----------|
+| `BubbleSort.java` | Bubble Sort – Nachbarn vertauschen | O(n²) |
+| `SelectionSort.java` | Selection Sort – kleinstes Element suchen | O(n²) |
+| `JustQuick.java` | Quicksort – Divide & Conquer | O(n log n) Ø |
+| `Arrays.java` | Hilfsmethoden für Array-Ausgabe & -Erzeugung | – |
 
-### Klassische Algorithmen / Probleme
+### Klassische Algorithmen & Probleme
 
 | Datei | Problem |
 |-------|---------|
-| `Hanoi.java`, `TuermeVonHanoi.java` | Türme von Hanoi (Rekursion) |
-| `Rucksackproblem.java` | Rucksackproblem |
+| `Hanoi.java`, `TuermeVonHanoi.java` | Türme von Hanoi – einfacher + Stack-visualisierter Ansatz |
+| `Rucksackproblem.java` | Rucksackproblem (0/1-Knapsack) |
 | `Potenz.java` | Schnelle Exponentiation |
-| `Lotto.java`, `Lottozahlen.java` | Zufallszahlen ohne Wiederholung |
+| `Lotto.java` | 6 aus 49 ohne Wiederholung |
+| `Uebung.java` | Sieb des Eratosthenes (Primzahlgenerierung) |
 
-### Aufgaben / Fallbeispiele
+### Aufgaben & Fallbeispiele
 
 | Datei | Aufgabe |
 |-------|---------|
 | `Gluecksspiel.java` | Simulation eines Glücksspiels |
-| `Kreditkarte.java` | Kreditkartenprüfziffer / IBAN-artige Aufgabe |
-| `Notruf.java` | Einfache Fallunterscheidung |
+| `Kreditkarte.java` | Kreditkartenprüfziffer (Luhn-Algorithmus) |
+| `Notruf.java` | Einfache Objektklasse mit Prioritätsfeld |
 | `Wind.java` | Windrichtungen / Beaufort-Skala |
-
-### Sonstiges
-
-| Datei | Zweck |
-|-------|-------|
-| `Test.java`, `Uebung.java` | Sammel-`main` und Ad-hoc-Tests |
-| `HelloWorld.py` | Einziges Python-File im Projekt – „geht auch anders" |
 
 ## Nutzung
 
-Eclipse-Projekt. Jede Klasse hat (meist) ihre eigene `main`-Methode und ist unabhängig lauffähig. Zum gezielten Ausprobieren einzelne Datei im Package-Explorer öffnen und ausführen.
+Eclipse-Projekt. Jede Klasse liegt im `src/`-Ordner und lässt sich direkt im Package-Explorer öffnen und ausführen. Kommandozeile alternativ:
 
-## Charakter des Projekts
+```bash
+cd Uebung
+javac -d build src/*.java
+java -cp build JustQuick          # oder eine andere Klasse mit main-Methode
+```
 
-Dies ist **kein** aufgeräumtes Lehrbuch-Repository: es enthält Dubletten (`List` / `List2` / `List3`), Experimente, Fragmente und unterschiedliche Coding-Stile aus verschiedenen Unterrichtsphasen. Wer etwas Bestimmtes sucht, nutzt am besten die obige Übersicht oder die Eclipse-Suche.
+## Zum Charakter des Projekts
+
+Ursprünglich eine über mehrere Schuljahre gewachsene „Spielwiese" mit Dubletten und Fragmenten – im Aprill 2026 aufgeräumt:
+- offensichtliche Duplikate entfernt (`JustBubble`/`JustSelect` als Kopien der Hauptsorte, `List`/`List2`/`List3` als trivialer ArrayList-Demos, `Lottozahlen` als Kopie von `Lotto`, `Test.java` als Scratch-Datei)
+- verbliebene Klassen mit durchgehenden Javadoc-Kommentaren versehen
+- kleinere Bugs gefixt (z. B. `Queue.enqueue/dequeue`, `Hanoi`-Scheibenzahl)
 
 Für aufgeräumte, didaktisch fokussierte Einzelprojekte siehe z. B.:
 - [Schneckenrennen](https://github.com/hibbes/Schneckenrennen) – OOP-Einführung
 - [Uebung_HundeObjekt](https://github.com/hibbes/Uebung_HundeObjekt) – Vererbung
 - [zahlenRaten](https://github.com/hibbes/zahlenRaten) – Binäre Suche
+- [Listen](https://github.com/hibbes/Listen) – einfach verkettete Liste als Minimalbeispiel
 
 ## Kontext
 
-Unterrichtsmaterial Informatik (Schiller-Gymnasium Offenburg) – über mehrere Schuljahre gewachsene Übungssammlung.
+Unterrichtsmaterial Informatik (Schiller-Gymnasium Offenburg).

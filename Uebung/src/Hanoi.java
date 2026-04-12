@@ -47,7 +47,11 @@ public class Hanoi {
 
     public static void main (String[] args)
     {
-	bewege('a', 'b', 'c', 100);
+        // Achtung: Die Zahl der nötigen Züge wächst exponentiell (2^n - 1).
+        // Schon bei n=20 wären das gut 1 Million Züge; 100 Scheiben wären
+        // rechnerisch völlig unrealistisch (ca. 1,3 · 10^30 Züge). Für die
+        // Demonstration genügt ein kleiner Wert.
+        bewege('a', 'b', 'c', 5);
     }
 
 }
